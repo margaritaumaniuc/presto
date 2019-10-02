@@ -20,6 +20,9 @@ class Home(BasePage):
         return self.find_all_elements(self.LOCATORS.RESULT_ITEMS)
 
     def get_best_sellers(self):
+        # We don't know how many best sellers will be in the result.
+        # To look elements by text won't work in this case because after we find them we need to click on them.
+        # Let's find a parent element of rows and then loop through them to check if they are best sellers.
         best_sellers_links = set()
         all_items = self.result_items()
         for result in all_items:
