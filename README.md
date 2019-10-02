@@ -26,5 +26,5 @@ $ mv chromedriver path_to_project/tests/lib
 ### Running the test:
 ```
 $ cd tests
-$ py.test test_sign_up.py
+$ py.test test_best_seller_otemps.py
 ```
